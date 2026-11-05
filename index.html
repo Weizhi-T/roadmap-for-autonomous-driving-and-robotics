@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="自动驾驶与机器人交互技术全景 / An interactive research atlas for autonomous driving and robotics.">
+<meta name="theme-color" content="#173d31"><title>技术全景 · Embodied Atlas</title>
+<link rel="stylesheet" href="style.css"><script src="data.js" defer></script><script src="app.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main" id="skip">跳到主要内容</a>
+<aside class="sidebar" id="sidebar"></aside>
+<div class="workspace">
+<header class="topbar"><button class="icon-button mobile-menu" id="menuToggle" aria-expanded="false">☰</button><a href="#home" class="topbrand">EMBODIED ATLAS<span> / 2026</span></a><div class="tools"><button id="openSearch" class="tool-button"><span aria-hidden="true">⌕</span><span id="searchLabel"></span><kbd>/</kbd></button><div class="segmented language" role="group" id="languageGroup"><button data-lang="zh" lang="zh-CN">中文</button><button data-lang="en" lang="en">EN</button></div><label class="font-control"><span aria-hidden="true">Aa</span><select id="fontSize"></select></label></div></header>
+<div class="viewbar"><nav class="breadcrumbs" id="breadcrumbs"></nav><div class="segmented domain" id="domainGroup" role="group"></div></div>
+<main id="main" tabindex="-1"></main>
+<footer id="footer"></footer>
+</div>
+<dialog id="searchDialog" aria-labelledby="searchTitle"><div class="dialog-head"><h2 id="searchTitle"></h2><button id="closeSearch" class="icon-button">×</button></div><input id="searchInput" type="search" autocomplete="off"><div class="search-meta" id="searchMeta" role="status" aria-live="polite"></div><div id="searchResults"></div><div class="search-foot" id="searchFoot"></div></dialog>
+<div class="sr-only" id="announcer" role="status" aria-live="polite"></div>
+</body></html>
