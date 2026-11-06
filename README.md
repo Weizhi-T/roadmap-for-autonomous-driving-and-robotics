@@ -9,6 +9,7 @@ An interactive, bilingual knowledge map connecting research across autonomous dr
 ## Explore | 探索内容
 
 - **[Interactive atlas / 交互全景图](https://weizhi-t.github.io/roadmap-for-autonomous-driving-and-robotics/#atlas):** Browse the research map by stage and method, then follow nodes to explanations and references. 按阶段和方法浏览研究地图，进入节点查看说明与参考资料。
+- **[Reference library / 参考文献库](https://weizhi-t.github.io/roadmap-for-autonomous-driving-and-robotics/#references):** Find papers, author projects, code and official documentation. 查找论文、作者项目、代码与官方文档。
 - **[Field notes / 研究导读](https://weizhi-t.github.io/roadmap-for-autonomous-driving-and-robotics/#news):** Explore selected research resources and context. 浏览精选研究资料与背景。
 
 The research questions, arXiv, algorithm principles, and project reproduction sections are planned and do not yet contain published content. Automatic arXiv updates are not configured.
