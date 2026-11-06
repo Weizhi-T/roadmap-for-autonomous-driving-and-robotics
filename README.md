@@ -9,8 +9,11 @@ An interactive, bilingual knowledge map connecting research across autonomous dr
 ## Explore | 探索内容
 
 - **[Interactive atlas / 交互全景图](https://weizhi-t.github.io/roadmap-for-autonomous-driving-and-robotics/#atlas):** Browse the research map by stage and method, then follow nodes to explanations and references. 按阶段和方法浏览研究地图，进入节点查看说明与参考资料。
-- **[Field notes / 研究导读](https://weizhi-t.github.io/roadmap-for-autonomous-driving-and-robotics/#news)** and **[research questions / 深度思考课题](https://weizhi-t.github.io/roadmap-for-autonomous-driving-and-robotics/#topics):** Connect methods to broader questions and context. 从研究背景和问题出发，理解方法之间的联系。
-- **[arXiv papers / arXiv 文章](https://weizhi-t.github.io/roadmap-for-autonomous-driving-and-robotics/#arxiv), [algorithm principles / 算法原理](https://weizhi-t.github.io/roadmap-for-autonomous-driving-and-robotics/#principles), and [project reproductions / 项目复现](https://weizhi-t.github.io/roadmap-for-autonomous-driving-and-robotics/#reproductions):** Find further reading and practical starting points. 查找延伸阅读与实践入口。
+- **[Field notes / 研究导读](https://weizhi-t.github.io/roadmap-for-autonomous-driving-and-robotics/#news):** Explore selected research resources and context. 浏览精选研究资料与背景。
+
+The research questions, arXiv, algorithm principles, and project reproduction sections are planned and do not yet contain published content. Automatic arXiv updates are not configured.
+
+深度思考课题、arXiv 文章、算法原理和项目复现栏目仍在建设中，尚未发布内容；arXiv 自动更新尚未配置。
 
 Switch between Chinese and English or filter by autonomous driving and robotics. Use the search button or press `/` to find topics and sources.
 
