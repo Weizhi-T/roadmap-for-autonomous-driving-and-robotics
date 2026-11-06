@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>验证、诊断与更新 / Validation, Diagnosis, and Updates · Embodied Atlas</title>
+<meta name="description" content="用可信证据决定下一轮改什么。 Use credible evidence to decide what to change in the next iteration. 自动驾驶与机器人 / Autonomous driving and robotics.">
+<link rel="canonical" href="https://weizhi-t.github.io/roadmap-for-autonomous-driving-and-robotics/guides/feedback/">
+<link rel="sitemap" type="application/xml" href="https://weizhi-t.github.io/roadmap-for-autonomous-driving-and-robotics/sitemap.xml">
+<meta name="theme-color" content="#173d31">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Embodied Atlas">
+<meta property="og:title" content="验证、诊断与更新 / Validation, Diagnosis, and Updates · Embodied Atlas">
+<meta property="og:description" content="用可信证据决定下一轮改什么。 Use credible evidence to decide what to change in the next iteration. 自动驾驶与机器人 / Autonomous driving and robotics.">
+<meta property="og:url" content="https://weizhi-t.github.io/roadmap-for-autonomous-driving-and-robotics/guides/feedback/">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="../style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"验证、诊断与更新 / Validation, Diagnosis, and Updates · Embodied Atlas","description":"用可信证据决定下一轮改什么。 Use credible evidence to decide what to change in the next iteration. 自动驾驶与机器人 / Autonomous driving and robotics.","url":"https://weizhi-t.github.io/roadmap-for-autonomous-driving-and-robotics/guides/feedback/","inLanguage":["zh-CN","en"],"isPartOf":{"@type":"WebSite","name":"Embodied Atlas","url":"https://weizhi-t.github.io/roadmap-for-autonomous-driving-and-robotics/"}}</script>
+</head>
+<body><a class="skip" href="#main">跳到正文 / Skip to content</a>
+<header><a href="../../">EMBODIED ATLAS</a><nav aria-label="主导航 / Main navigation"><a href="../">专题导读 / Reading guides</a><a href="../../#stage/feedback">交互图谱 / Interactive atlas ↗</a></nav></header>
+<main id="main"><p class="eyebrow">04 / AUTONOMOUS DRIVING &amp; ROBOTICS</p><h1>验证、诊断与更新 <span lang="en">/ Validation, Diagnosis, and Updates</span></h1>
+<p>用可信证据决定下一轮改什么。 <span lang="en">Use credible evidence to decide what to change in the next iteration.</span></p>
+<p class="note">本页收录图谱中该环节的方法正文。完整分支、图示和论文链接见交互图谱。<br><span lang="en">This reading guide contains the atlas's method explanations for this stage. Open the interactive atlas for the full branches, illustrations and reference records.</span></p>
+<nav class="contents" aria-label="本页目录 / On this page"><h2>本页目录 / Contents</h2><ul><li><a href="#category-4a">开环与离线评测 <span lang="en">/ Open-Loop and Offline Evaluation</span></a></li>
+<li><a href="#category-4b">闭环仿真与真实任务 <span lang="en">/ Closed-Loop Simulation and Real-World Tasks</span></a></li>
+<li><a href="#category-4c">安全可靠性与形式化分析 <span lang="en">/ Safety, Reliability, and Formal Analysis</span></a></li>
+<li><a href="#category-4d">失败归因与下一轮改进 <span lang="en">/ Failure Attribution and Next-Iteration Improvements</span></a></li>
+<li><a href="#category-4e">更新接受与持续学习 <span lang="en">/ Update Acceptance and Continual Learning</span></a></li></ul></nav>
+<section id="category-4a"><h2>开环与离线评测 <span lang="en">/ Open-Loop and Offline Evaluation</span></h2><article id="method-4a-1"><h3>感知预测与动作指标 <span lang="en">/ Perception, Prediction, and Action Metrics</span></h3>
+<div class="parallel"><div lang="zh-CN"><p>检测、分割、定位、运动预测、动作重建与轨迹误差有助于定位模块问题。它们通常基于固定日志或标注，无法完整观察模型自己的动作怎样改变后续状态。</p>
+<p>同一个轨迹误差可能来自可接受的多解，也可能隐藏危险动作；同样的感知误差在不同决策场景中的代价也不同。因此开环指标应与决策影响建立联系。</p></div><div lang="en"><p>Detection, segmentation, localization, motion prediction, action reconstruction, and trajectory error help locate problems within modules. They are usually based on fixed logs or annotations and cannot fully reveal how the model’s own actions alter subsequent states.</p>
+<p>A given trajectory error may reflect acceptable alternative solutions, or it may conceal dangerous actions; the cost of the same perception error also varies across decision contexts. Open-loop metrics should therefore be connected to their effects on decisions.</p></div></div>
+<p><a class="action" href="../../#node/4a-1">查看完整方法、分支与参考文献 <span lang="en">/ Open method, branches &amp; references</span> ↗</a></p></article>
+<article id="method-4a-2"><h3>非交互式规划评测 <span lang="en">/ Non-Interactive Planning Evaluation</span></h3>
+<div class="parallel"><div lang="zh-CN"><p><a href="https://arxiv.org/abs/2406.15349" rel="noopener noreferrer">NAVSIM</a>代表以数据驱动的非交互式评测研究规划能力。使用环境模型或短时展开，并不自动使评测成为带完整相互响应的交互闭环。阅读时检查自车、他车、传感器和行为是否随干预更新。</p></div><div lang="en"><p><a href="https://arxiv.org/abs/2406.15349" rel="noopener noreferrer">NAVSIM</a> represents research that studies planning capabilities through data-driven, non-interactive evaluation. Using an environment model or a short-horizon rollout does not automatically make an evaluation an interactive closed loop with fully reciprocal responses. Check whether the ego vehicle, other vehicles, sensors, and behaviors are updated in response to interventions.</p></div></div>
+<p><a class="action" href="../../#node/4a-2">查看完整方法、分支与参考文献 <span lang="en">/ Open method, branches &amp; references</span> ↗</a></p></article>
+<article id="method-4a-3"><h3>固定数据的离线强化学习评测 <span lang="en">/ Offline Reinforcement Learning Evaluation with Fixed Data</span></h3>
+<div class="parallel"><div lang="zh-CN"><p><a href="https://arxiv.org/abs/2004.07219" rel="noopener noreferrer">D4RL</a>提供任务、数据集与评测协议入口。数据覆盖、采集策略和归一化定义会影响分数；不同 benchmark 的数字不能直接合并成通用能力排名。</p></div><div lang="en"><p><a href="https://arxiv.org/abs/2004.07219" rel="noopener noreferrer">D4RL</a> provides an entry point into tasks, datasets, and evaluation protocols. Data coverage, collection policies, and normalization definitions affect scores; numbers from different benchmarks cannot be directly pooled into a ranking of general capability.</p></div></div>
+<p><a class="action" href="../../#node/4a-3">查看完整方法、分支与参考文献 <span lang="en">/ Open method, branches &amp; references</span> ↗</a></p></article></section>
+<section id="category-4b"><h2>闭环仿真与真实任务 <span lang="en">/ Closed-Loop Simulation and Real-World Tasks</span></h2><article id="method-4b-1"><h3>驾驶闭环 <span lang="en">/ Closed-Loop Driving</span></h3>
+<div class="parallel"><div lang="zh-CN"><p><a href="https://arxiv.org/abs/2106.11810" rel="noopener noreferrer">nuPlan</a>研究基于真实数据的规划评测；<a href="https://leaderboard.carla.org/" rel="noopener noreferrer">CARLA Leaderboard</a>与<a href="https://arxiv.org/abs/2406.03877" rel="noopener noreferrer">Bench2Drive</a>提供驾驶闭环测试入口。对比分数前先核对版本、路线、天气、交通、传感器、地图信息和参与者反应模型。</p>
+<p>闭环结果也有层次：日志重放、可响应代理、完整传感器再生成及真实道路测试的证据范围不同。应写清干预影响了哪些后续变量。</p></div><div lang="en"><p><a href="https://arxiv.org/abs/2106.11810" rel="noopener noreferrer">nuPlan</a> studies planning evaluation based on real-world data; <a href="https://leaderboard.carla.org/" rel="noopener noreferrer">CARLA Leaderboard</a> and <a href="https://arxiv.org/abs/2406.03877" rel="noopener noreferrer">Bench2Drive</a> provide entry points into closed-loop driving tests. Before comparing scores, check versions, routes, weather, traffic, sensors, map information, and agent-response models.</p>
+<p>Closed-loop results also have distinct levels: log replay, responsive agents, full sensor regeneration, and real-road testing provide evidence with different scopes. Specify which subsequent variables are affected by interventions.</p></div></div>
+<p><a class="action" href="../../#node/4b-1">查看完整方法、分支与参考文献 <span lang="en">/ Open method, branches &amp; references</span> ↗</a></p></article>
+<article id="method-4b-2"><h3>机器人任务与长程执行 <span lang="en">/ Robot Tasks and Long-Horizon Execution</span></h3>
+<div class="parallel"><div lang="zh-CN"><p><a href="https://libero-project.github.io/main.html" rel="noopener noreferrer">LIBERO</a>提供机器人学习任务与迁移研究入口；<a href="https://github.com/mees/calvin" rel="noopener noreferrer">CALVIN</a>关注语言条件长程任务；<a href="https://arxiv.org/abs/2405.05941" rel="noopener noreferrer">SIMPLER</a>研究以仿真评估真实机器人策略。成功率须绑定任务定义、场景、尝试次数、复位和模型输入。</p>
+<p>单次成功视频只说明发生过成功，不估计总体成功率。长程任务应记录中途恢复、重试、失败位置和完成时间。</p></div><div lang="en"><p><a href="https://libero-project.github.io/main.html" rel="noopener noreferrer">LIBERO</a> provides an entry point into robot learning tasks and transfer research; <a href="https://github.com/mees/calvin" rel="noopener noreferrer">CALVIN</a> focuses on language-conditioned long-horizon tasks; <a href="https://arxiv.org/abs/2405.05941" rel="noopener noreferrer">SIMPLER</a> studies the use of simulation to evaluate real-world robot policies. Success rates must be tied to task definitions, scenes, numbers of attempts, resets, and model inputs.</p>
+<p>A video of a single successful trial only shows that success occurred; it does not estimate the overall success rate. Long-horizon tasks should record recovery during execution, retries, failure locations, and completion times.</p></div></div>
+<p><a class="action" href="../../#node/4b-2">查看完整方法、分支与参考文献 <span lang="en">/ Open method, branches &amp; references</span> ↗</a></p></article>
+<article id="method-4b-3"><h3>真实部署与外部分布 <span lang="en">/ Real-World Deployment and Distribution Shifts</span></h3>
+<div class="parallel"><div lang="zh-CN"><p>将场景、对象、语言、机体和扰动逐项改变，观察泛化边界。仿真验证后的真实测试仍需独立设计，尤其检查视觉差异、摩擦接触、标定、控制频率和人类干预。</p>
+<p>测试应记录样本量、随机种子或场景集合、版本与不确定性。小样本中没有事故不能作为稀有风险已经足够低的证据。</p></div><div lang="en"><p>Vary scenes, objects, language, embodiments, and disturbances one at a time to observe the limits of generalization. Real-world tests after simulation validation still require an independent design, with particular attention to visual differences, friction and contact, calibration, control frequency, and human intervention.</p>
+<p>Tests should record sample sizes, random seeds or scenario sets, versions, and uncertainty. The absence of accidents in a small sample is not evidence that rare-event risk is sufficiently low.</p></div></div>
+<p><a class="action" href="../../#node/4b-3">查看完整方法、分支与参考文献 <span lang="en">/ Open method, branches &amp; references</span> ↗</a></p></article></section>
+<section id="category-4c"><h2>安全可靠性与形式化分析 <span lang="en">/ Safety, Reliability, and Formal Analysis</span></h2><article id="method-4c-1"><h3>约束满足与风险场景 <span lang="en">/ Constraint Satisfaction and Risk Scenarios</span></h3>
+<div class="parallel"><div lang="zh-CN"><p>碰撞、越界、力矩、接触力、安全距离和任务约束应按应用定义。<a href="https://arxiv.org/abs/1609.06408" rel="noopener noreferrer">CBF</a>与<a href="https://arxiv.org/abs/1708.06374" rel="noopener noreferrer">RSS</a>展示显式安全结构，但理论结论依赖具体假设。实测低违例率、模型内约束成立和真实系统安全是不同层级的证据。</p></div><div lang="en"><p>Collisions, boundary violations, torques, contact forces, safety distances, and task constraints should be defined for the application. <a href="https://arxiv.org/abs/1609.06408" rel="noopener noreferrer">CBF</a> and <a href="https://arxiv.org/abs/1708.06374" rel="noopener noreferrer">RSS</a> demonstrate explicit safety structures, but their theoretical conclusions depend on specific assumptions. Low measured violation rates, constraint satisfaction within a model, and real-system safety are different levels of evidence.</p></div></div>
+<p><a class="action" href="../../#node/4c-1">查看完整方法、分支与参考文献 <span lang="en">/ Open method, branches &amp; references</span> ↗</a></p></article>
+<article id="method-4c-2"><h3>鲁棒性与运行时边界 <span lang="en">/ Robustness and Runtime Limits</span></h3>
+<div class="parallel"><div lang="zh-CN"><p>测试传感器失效、延迟抖动、观测过期、计算超时、动作饱和与外部扰动。要同时检查性能下降、监测是否及时发现，以及回退或恢复是否仍然可靠。</p></div><div lang="en"><p>Test sensor failures, latency jitter, stale observations, computation timeouts, actuator saturation, and external disturbances. Examine performance degradation, whether monitoring detects problems promptly, and whether fallback or recovery remains reliable.</p></div></div>
+<p><a class="action" href="../../#node/4c-2">查看完整方法、分支与参考文献 <span lang="en">/ Open method, branches &amp; references</span> ↗</a></p></article>
+<article id="method-4c-3"><h3>校准与求助 <span lang="en">/ Calibration and Help-Seeking</span></h3>
+<div class="parallel"><div lang="zh-CN"><p>置信度应该与正确性、可行性或风险的具体事件对应。<a href="https://robot-help.github.io/" rel="noopener noreferrer">KnowNo</a>提供求助与不确定性校准的代表；分布变化后应重新检验校准，不能将一个分数当作跨任务通用的安全证书。</p></div><div lang="en"><p>Confidence should correspond to a specific event involving correctness, feasibility, or risk. <a href="https://robot-help.github.io/" rel="noopener noreferrer">KnowNo</a> is a representative approach to help-seeking and uncertainty calibration. Reassess calibration after distribution shifts; a single score cannot serve as a general safety certificate across tasks.</p></div></div>
+<p><a class="action" href="../../#node/4c-3">查看完整方法、分支与参考文献 <span lang="en">/ Open method, branches &amp; references</span> ↗</a></p></article></section>
+<section id="category-4d"><h2>失败归因与下一轮改进 <span lang="en">/ Failure Attribution and Next-Iteration Improvements</span></h2><article id="method-4d-1"><h3>从结果到机制 <span lang="en">/ From Outcomes to Mechanisms</span></h3>
+<div class="parallel"><div lang="zh-CN"><p>对失败至少记录观测、模型版本、关键中间量、动作、环境响应和恢复结果。可分为数据缺口、不可观测状态、表征错误、目标或奖励偏差、规划错误、执行失配和部署故障。</p>
+<p>分类是待验证的诊断，不是给每次失败贴一个确定标签。用受控干预检验：补观测是否改善，换正确状态是否改善，固定策略只换控制器是否改善。</p></div><div lang="en"><p>For each failure, record at least the observations, model version, key intermediate variables, actions, environmental responses, and recovery outcomes. Possible categories include data gaps, unobservable states, representation errors, objective or reward misspecification, planning errors, execution mismatches, and deployment faults.</p>
+<p>These categories are diagnoses to be tested, not definitive labels to attach to every failure. Use controlled interventions to test whether adding observations helps, substituting the correct state helps, or replacing only the controller while holding the policy fixed helps.</p></div></div>
+<p><a class="action" href="../../#node/4d-1">查看完整方法、分支与参考文献 <span lang="en">/ Open method, branches &amp; references</span> ↗</a></p></article>
+<article id="method-4d-2"><h3>把失败送回正确环节 <span lang="en">/ Route Failures Back to the Appropriate Stage</span></h3>
+<div class="parallel"><div lang="zh-CN"><p>- 数据不足：补采、重标注、筛选、仿真或生成。</p>
+<p>- 学习目标不合适：改变监督、奖励、损失或训练配方。</p>
+<p>- 执行接口不匹配：修正坐标、时延、技能前置条件、计划切换与恢复。</p>
+<p>- 评测失真：调整场景、交互模型、指标和数据切分。</p>
+<p>先通过小而可控的对照确定方向，再扩展系统规模。收益若只是来自更长训练或更多数据，应如实归因。</p></div><div lang="en"><p>- Insufficient data: collect more data, relabel, filter, simulate, or generate it.</p>
+<p>- Unsuitable learning objectives: change supervision, rewards, losses, or the training recipe.</p>
+<p>- Mismatched execution interfaces: correct coordinates, latency, skill preconditions, plan switching, and recovery.</p>
+<p>- Distorted evaluation: revise scenarios, interaction models, metrics, and data splits.</p>
+<p>First establish a direction through small, controlled comparisons, then scale the system. If gains come only from longer training or more data, attribute them accordingly.</p></div></div>
+<p><a class="action" href="../../#node/4d-2">查看完整方法、分支与参考文献 <span lang="en">/ Open method, branches &amp; references</span> ↗</a></p></article></section>
+<section id="category-4e"><h2>更新接受与持续学习 <span lang="en">/ Update Acceptance and Continual Learning</span></h2><article id="method-4e-1"><h3>回归测试与版本记录 <span lang="en">/ Regression Testing and Version Records</span></h3>
+<div class="parallel"><div lang="zh-CN"><p>每次更新绑定数据、代码、权重、环境、提示或技能库版本。新任务收益与旧任务退化同时报告，保护不参与开发的测试集。根据失败影响范围安排重点回归，但不要把局部测试当作全域保障。</p></div><div lang="en"><p>Tie every update to versions of the data, code, weights, environment, prompts, or skill library. Report gains on new tasks together with degradation on old tasks, and protect test sets that are not used in development. Prioritize regression tests according to the scope of a failure’s impact, but do not treat local testing as a guarantee across the entire operating domain.</p></div></div>
+<p><a class="action" href="../../#node/4e-1">查看完整方法、分支与参考文献 <span lang="en">/ Open method, branches &amp; references</span> ↗</a></p></article>
+<article id="method-4e-2"><h3>接受拒绝与回滚 <span lang="en">/ Acceptance, Rejection, and Rollback</span></h3>
+<div class="parallel"><div lang="zh-CN"><p>预先定义更新门槛：任务收益、风险变化、延迟与资源成本、旧能力保持。存在不确定性时可以保留候选并扩大验证；不满足门槛就拒绝或回滚，而不是只保留最好看的指标。</p></div><div lang="en"><p>Define update acceptance criteria in advance: task gains, changes in risk, latency and resource costs, and retention of prior capabilities. When uncertainty remains, retain a candidate and expand validation; if it fails to meet the criteria, reject it or roll back rather than retain only the most favorable metrics.</p></div></div>
+<p><a class="action" href="../../#node/4e-2">查看完整方法、分支与参考文献 <span lang="en">/ Open method, branches &amp; references</span> ↗</a></p></article>
+<article id="method-4e-3"><h3>经验与程序更新 <span lang="en">/ Experience and Program Updates</span></h3>
+<div class="parallel"><div lang="zh-CN"><p>外部记忆、技能图和程序也需要版本与评测。它们可以改善行为，但更新并不等于模型权重获得新能力。评测应区分冻结记忆、允许在线写入、跨任务共享和不同任务顺序。</p></div><div lang="en"><p>External memory, skill graphs, and programs also need versioning and evaluation. They can improve behavior, but updating them does not mean that model weights have acquired new capabilities. Evaluation should distinguish frozen memory, permission to write online, sharing across tasks, and different task orders.</p></div></div>
+<p><a class="action" href="../../#node/4e-3">查看完整方法、分支与参考文献 <span lang="en">/ Open method, branches &amp; references</span> ↗</a></p></article></section>
+<nav class="contents" aria-label="其他研发环节 / Other research stages"><h2>继续阅读 / Keep reading</h2><ul><li><a href="../data/">数据与环境 <span lang="en">/ Data and Environments</span></a></li>
+<li><a href="../training/">建模与学习 <span lang="en">/ Modeling and Learning</span></a></li>
+<li><a href="../execution/">在线决策与控制 <span lang="en">/ Online Decision-Making and Control</span></a></li>
+<li><a href="../feedback/">验证、诊断与更新 <span lang="en">/ Validation, Diagnosis, and Updates</span></a></li></ul></nav></main><footer><p>内容快照 <span lang="en">/ Content snapshot</span>: 2026-11-06. <a href="../../#guide">来源、许可与说明 <span lang="en">/ Sources, licenses &amp; notes</span></a></p><p><a href="https://github.com/Weizhi-T/roadmap-for-autonomous-driving-and-robotics">GitHub 仓库 <span lang="en">/ Repository</span></a> · <a href="https://github.com/Weizhi-T/roadmap-for-autonomous-driving-and-robotics/issues">讨论与建议 <span lang="en">/ Discussion &amp; suggestions</span></a></p></footer>
+</body></html>
