@@ -12,7 +12,7 @@ function display(){
  button.disabled=!reachable;
  if(count===null&&!reachable)status.textContent=tr('正在连接共享点赞，起始值为 200。','Connecting shared likes. Starting value: 200.');
  else if(!reachable)status.textContent=tr('共享点赞暂不可用，请稍后再试。起始值为 200。','Shared likes are unavailable. Please try again later. Starting value: 200.');
- else status.textContent=pending?tr('正在同步 '+pending+' 次点赞。','Syncing '+pending+' likes.'):tr('每次点击计一次；起始值为 200。','Each click counts once; starting value: 200.');
+ else status.textContent=pending?tr('正在同步 '+pending+' 次点赞。','Syncing '+pending+' likes.'):'';
 }
 async function request(method){
  const controller=new AbortController();const timer=setTimeout(()=>controller.abort(),15000);
