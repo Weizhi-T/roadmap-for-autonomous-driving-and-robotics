@@ -40,7 +40,7 @@ async function sync(){
 function burst(button){
  if(document.documentElement.dataset.motion==='paused'||window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
  button.classList.remove('community-bump');void button.offsetWidth;button.classList.add('community-bump');
- const chars=['♥','✦','✧','+1'];for(let i=0;i<4;i++){const el=document.createElement('span');el.className='community-pop';el.textContent=chars[Math.floor(Math.random()*chars.length)];el.style.left=(20+Math.random()*60)+'%';el.style.top='0';el.style.setProperty('--x',((Math.random()-.5)*70)+'px');el.style.setProperty('--r',((Math.random()-.5)*70)+'deg');button.appendChild(el);setTimeout(()=>el.remove(),850);}
+ const chars=['🎉','🌹','✌️','🎆','🎁','💖','🥳','🚀','✨','👏'];for(let i=0;i<4;i++){const el=document.createElement('span');el.className='community-pop';el.textContent=chars[Math.floor(Math.random()*chars.length)];el.style.left=(20+Math.random()*60)+'%';el.style.top='0';el.style.setProperty('--x',((Math.random()-.5)*70)+'px');el.style.setProperty('--r',((Math.random()-.5)*70)+'deg');button.appendChild(el);setTimeout(()=>el.remove(),850);}
 }
 document.addEventListener('click',e=>{
  const bookmark=e.target.closest('[data-community-bookmark]');
